@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: moonhouse;
+    src: url("/src/fonts/Moonhouse-yE5M.ttf");
+}

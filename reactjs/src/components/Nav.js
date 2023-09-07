@@ -1,39 +1,89 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Nav = () => {
-    let Links =[
-      {name:"HOME",link:"/"},
-      {name:"SERVICE",link:"/"},
-      {name:"ABOUT",link:"/"},
-      {name:"BLOG'S",link:"/"},
-      {name:"CONTACT",link:"/"},
-    ];
     let [open,setOpen]=useState(false);
-  return (
-    <div className='shadow-md w-full fixed top-0 left-0'>
-      <div className='md:flex items-center justify-between bg-white py-4 md:px-10 px-7'>
-      <div className='font-bold text-2xl cursor-pointer flex items-center font-[Poppins] 
-      text-gray-800'>
-        <span className='text-3xl text-indigo-600 mr-1 pt-2'>
-            Nav
-        </span>
-      </div>
-      
-      <div onClick={()=>setOpen(!open)} className='text-3xl absolute right-8 top-6 cursor-pointer md:hidden'>
-      <ion-icon name={open ? 'close':'menu'}></ion-icon>
-      </div>
 
-      <ul className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-20 ':'top-[-490px]'}`}>
+    const [lastScrollTop, setLastScrollTop] = useState(0);
+    const [navbarTop, setNavbarTop] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (scrollTop > lastScrollTop) {
+        setNavbarTop('-80px');
+      } else {
+        setNavbarTop('0');
+      }
+
+      setLastScrollTop(scrollTop);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [lastScrollTop]);
+
+  const handleClickScroll = (elementId) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  let Links =[
+    {name:"HOME",id:"home"},
+    {name:"ABOUT",id:"about"},
+    {name:"PROJECTS",id:"projects"},
+    {name:"CONTACT",id:"contact"},
+  ];
+
+  return (
+    <>
+    <div onClick={()=>setOpen(!open)} className={`
+    flex justify-end h-[50px]
+    relative
+    md:hidden
+    transition-all duration-500 ease-in
+    ${open ? 'bg-[#00000071]' :''}
+    `}
+    >
+        <button className={`
+        w-[40px] h-[40px] bg-center mr-2 mt-2
+        transition-all duration-500 ease-in
+        ${open ? "bg-cover bg-[url('/src/img/close.png')]" :"bg-cover bg-[url('/src/img/menu.png')]"}
+        `}
+        name={open ? 'close':'menu'}>
+        </button>
+    </div>
+    <div onClick={()=>setOpen(!open)} className={`
+      w-full min-w-[300px] flex align-center justify-center
+      relative
+      transition-all duration-500 ease-in
+      ${open ? 'top-0 md:top-[10px] bg-[#00000071] md:bg-transparent' :'top-[-400px] md:top-[10px] md:bg-transparent'}`}>
+      <ul className="md:flex">
         {
           Links.map((link)=>(
-            <li key={link.name} className='md:ml-8 text-xl md:my-0 my-7'>
-              <a href={link.link} className='text-gray-800 hover:text-gray-400 duration-500'>{link.name}</a>
+            <li key={link.name} className="h-[60px] flex items-center">
+              <button onClick={() => handleClickScroll(link.id)} className="text-white text-[25px]
+               font-moonhouse pl-3 pr-3">{link.name}</button>
             </li>
           ))
         }
       </ul>
-      </div>
     </div>
+    <button onClick={() => handleClickScroll('home')} 
+    className="
+            w-[200px]
+            h-[200px]
+            bg-cover
+            fixed bottom-[10px]
+            right-[10px] z-10 text-white
+            bg-[url('/src/img/ufo.gif')]
+    "></button>
+    </>
   )
 }
 
