@@ -4,17 +4,10 @@ const Nav = () => {
     let [open,setOpen]=useState(false);
 
     const [lastScrollTop, setLastScrollTop] = useState(0);
-    const [navbarTop, setNavbarTop] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-      if (scrollTop > lastScrollTop) {
-        setNavbarTop('-80px');
-      } else {
-        setNavbarTop('0');
-      }
 
       setLastScrollTop(scrollTop);
     };
@@ -44,10 +37,10 @@ const Nav = () => {
     <>
     <div onClick={()=>setOpen(!open)} className={`
     flex justify-end h-[50px]
-    relative
+    relative z-10
     md:hidden
     transition-all duration-500 ease-in
-    ${open ? 'bg-[#00000071]' :''}
+    ${open ? 'bg-[#000]' :''}
     `}
     >
         <button className={`
@@ -59,16 +52,16 @@ const Nav = () => {
         </button>
     </div>
     <div onClick={()=>setOpen(!open)} className={`
-      w-full min-w-[300px] flex align-center justify-center
-      relative
+      w-full flex align-center justify-center
+      relative z-10
       transition-all duration-500 ease-in
-      ${open ? 'top-0 md:top-[10px] bg-[#00000071] md:bg-transparent' :'top-[-400px] md:top-[10px] md:bg-transparent'}`}>
+      ${open ? 'top-0 md:top-[10px] bg-[#000] md:bg-transparent' :'top-[-400px] md:top-[10px] md:bg-transparent'}`}>
       <ul className="md:flex">
         {
           Links.map((link)=>(
-            <li key={link.name} className="h-[60px] flex items-center">
+            <li key={link.name} className="h-[60px] flex justify-center">
               <button onClick={() => handleClickScroll(link.id)} className="text-white text-[25px]
-               font-moonhouse pl-3 pr-3">{link.name}</button>
+               font-moonhouse pl-3 pr-3 duration-150 ease-in hover:text-[35px] hover:text-[#72bf6a]">{link.name}</button>
             </li>
           ))
         }
@@ -76,9 +69,10 @@ const Nav = () => {
     </div>
     <button onClick={() => handleClickScroll('home')} 
     className="
-            w-[200px]
-            h-[200px]
+            w-[120px]
+            h-[160px]
             bg-cover
+            bg-center
             fixed bottom-[10px]
             right-[10px] z-10 text-white
             bg-[url('/src/img/ufo.gif')]
