@@ -2,7 +2,6 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact"; 
-import Slider from "./components/Slider";
 
 function App() {
   return (
@@ -25,7 +24,6 @@ function App() {
       <div className="w-full h-[40px] bg-black">
         <p className="text-[#999] text-center pt-[7px]">© 2023 Julach Earzan. All copyright rights reserved</p>
       </div>
-      <Slider/>
   </>
   );
 }

@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "react-alice-carousel/lib/alice-carousel.css";
 
 @font-face {
     font-family: moonhouse;
@@ -52,4 +53,16 @@ textarea:focus{
 textarea{
     height: 100px;
     padding-top: 5px;
+}
+
+.alice-carousel__dots{
+    display: none;
+}
+
+.alice-carousel__next-btn-wrapper{
+    display: none;
+}
+
+.alice-carousel__prev-btn-wrapper{
+    display: none;
 }

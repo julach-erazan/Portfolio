@@ -1,4 +1,5 @@
 import React from 'react'
+import Backgroundremoverslider from "../components/Backgroundremover_slider";
 
 export default function Projects() {
   return (
@@ -6,6 +7,7 @@ export default function Projects() {
       <h1 className='pl-[5px] text-[#000] text-[30px] font-bold mb-[120px] border-[#72bf6a] border-l-8'>PROJECTS</h1>
       
       <div className="w-full flex flex-col  items-center md:justify-between md:flex-row">
+
         <div className="w-[100%] h-[250px] md:w-[45%]">
           <p className="border-[#72bf6a] border-l-8 pl-[5px]">
             <span className="text-[#000] text-[30px] font-bold">To-Do-List</span>
@@ -15,10 +17,18 @@ export default function Projects() {
             in hic eveniet quam?
           </p>
         </div>
-        <div className="w-[100%] h-[250px] bg-[#12a] md:w-[45%]"></div>
+        <div className="w-[100%] h-[250px] bg-[#12a] md:w-[45%] flex items-center">
+          <p>Hello</p>
+        </div>
+
       </div>
+
       <div className="w-full flex flex-col  items-center md:justify-between md:flex-row mt-[30px]">
-        <div className="w-[100%] h-[250px] bg-[#444] md:w-[45%]"></div>
+
+        <div className="w-[100%] h-[250px] bg-[#444] md:w-[45%]">
+          <p>Hello</p>
+        </div>
+
         <div className="w-[100%] h-[250px] md:w-[45%]">
           <p className="border-[#72bf6a] border-r-8 pl-[5px]">
             <span className="text-[#000] text-[30px] font-bold">Tic-Tac-Toe</span>
@@ -28,8 +38,11 @@ export default function Projects() {
             in hic eveniet quam?
           </p>
         </div>
+
       </div>
+
       <div className="w-full flex flex-col  items-center md:justify-between md:flex-row mt-[30px]">
+
         <div className="w-[100%] h-[250px] md:w-[45%]">
           <p className="border-[#72bf6a] border-l-8 pl-[5px]">
             <span className="text-[#000] text-[30px] font-bold">Background-Remover</span>
@@ -39,10 +52,19 @@ export default function Projects() {
             in hic eveniet quam?
           </p>
         </div>
-        <div className="w-[100%] h-[250px] bg-[#12a] md:w-[45%]"></div>
+
+        <div className="w-[100%] h-[250px] md:w-[45%] flex items-center">
+        <Backgroundremoverslider/>
+        </div>
+
       </div>
+
       <div className="w-full flex flex-col  items-center md:justify-between md:flex-row mt-[30px]">
-        <div className="w-[100%] h-[250px] bg-[#444] md:w-[45%]"></div>
+
+        <div className="w-[100%] h-[250px] bg-[#444] md:w-[45%]">
+          <p>Hello</p>
+        </div>
+
         <div className="w-[100%] h-[250px] md:w-[45%]">
           <p className="border-[#72bf6a] border-r-8 pl-[5px]">
             <span className="text-[#000] text-[30px] font-bold">Shop-WebSite</span>
@@ -52,6 +74,7 @@ export default function Projects() {
             in hic eveniet quam?
           </p>
         </div>
+        
       </div>
     </div>
   )
