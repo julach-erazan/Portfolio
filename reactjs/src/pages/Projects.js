@@ -1,5 +1,8 @@
 import React from 'react'
-import Backgroundremoverslider from "../components/Backgroundremover_slider";
+import backgroundRem from '../img/backgroundRem.png'
+import rolex from '../img/rolex.png'
+import tictactoe from '../img/tictactoe.png'
+import todolist from '../img/todolist.png'
 
 export default function Projects() {
   return (
@@ -17,16 +20,28 @@ export default function Projects() {
             in hic eveniet quam?
           </p>
         </div>
-        <div className="w-[100%] h-[250px] bg-[#12a] md:w-[45%] flex items-center">
-          <p>Hello</p>
+        <div className="w-[100%] h-[250px] md:w-[45%] flex items-center justify-center">
+          <img
+          style={{
+            'max-height': '100%',
+            'max-width': '100%',
+          }}
+          src={todolist} alt="img" />
         </div>
 
       </div>
 
-      <div className="w-full flex flex-col  items-center md:justify-between md:flex-row mt-[30px]">
+      <div className="w-full flex items-center md:justify-between mt-[30px]
+      flex-wrap-reverse
+      ">
 
-        <div className="w-[100%] h-[250px] bg-[#444] md:w-[45%]">
-          <p>Hello</p>
+        <div className="w-[100%] h-[250px] md:w-[45%] flex items-center justify-center">
+          <img
+          style={{
+            'max-height': '100%',
+            'max-width': '100%',
+          }}
+          src={tictactoe} alt="img" />
         </div>
 
         <div className="w-[100%] h-[250px] md:w-[45%]">
@@ -53,16 +68,27 @@ export default function Projects() {
           </p>
         </div>
 
-        <div className="w-[100%] h-[250px] md:w-[45%] flex items-center">
-        <Backgroundremoverslider/>
+        <div className="
+        w-[100%] h-[250px] md:w-[45%] flex items-center justify-center">
+          <img
+          style={{
+            'max-height': '100%',
+            'max-width': '100%',
+          }}
+          src={backgroundRem} alt="img" />
         </div>
 
       </div>
 
-      <div className="w-full flex flex-col  items-center md:justify-between md:flex-row mt-[30px]">
+      <div className="w-full flex flex-wrap-reverse  items-center md:justify-between mt-[30px]">
 
-        <div className="w-[100%] h-[250px] bg-[#444] md:w-[45%]">
-          <p>Hello</p>
+        <div className="w-[100%] h-[250px] md:w-[45%] flex items-center justify-center">
+          <img
+          style={{
+            'max-height': '100%',
+            'max-width': '100%',
+          }}
+          src={rolex} alt="img" />
         </div>
 
         <div className="w-[100%] h-[250px] md:w-[45%]">
