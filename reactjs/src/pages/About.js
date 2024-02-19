@@ -19,11 +19,9 @@ export default function About() {
           border-[#72bf6a] border-l-8
           bg-[#0000001e]
           font-bold
-          '>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-             Iusto ad repellendus molestiae voluptatum velit 
-            quidem minus inventore? Eius blanditiis odit labore 
-            nisi provident placeat porro? Aut dignissimos impedit
-             ducimus alias!</p>
+          '>I am actively seeking an internship to improve my skills and gain realworld experience. My ambition is to collaborate with industry professionals 
+          and learn from their knowledge. I am dedicated, flexible and excited, and I am 
+          confident that I can learn quickly and work hard in any internship opportunity.</p>
         </div>
         <div className="
         w-[250px] h-[250px] bg-transparent
