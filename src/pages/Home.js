@@ -12,7 +12,7 @@ const Home = () => {
 
   React.useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ['Julach Earzan. ', 'Web Developer. '],
+      strings: ['Julach Earzan. ', 'Software Engineer. '],
       typeSpeed: 50,
       backSpeed: 50,
       loop: true,
@@ -32,10 +32,7 @@ const Home = () => {
           <h3 className='text-[30px] font-bold'>Hi, There</h3>
           <h1 className='md:text-[50px] font-black transition-all duration-300 ease-in text-[40px]'>I Am <span className='text-[#72bf6a]' ref={el}></span></h1>
           <p className='w-[500px] max-w-full pb-[20px]'>
-            I'm undergraduate in Eastern University Sri Lanka. I'm following a Computer Science Degree course. I am
-            able to demonstrate effective communication and organizational skills; work on my own initiative, both
-            independently and within a team. I have the excellent ability to organize and prioritize my workload to achieve
-            set goals and deadlines in the most efficient manner</p>
+            I build modern, responsive web applications using React, Next.js, and Node.js, focusing on clean design and performance.</p>
         </div>
         <div className='social flex space-x-[30px]'>
           <li className='w-[40px] h-[40px] bg-[#999] hover:bg-[#72bf6a] flex items-center justify-center rounded-full'><a href='/' ><img src={facebook} alt="Facebook" className='w-[20px] h-[20px]' /></a></li>
@@ -43,7 +40,7 @@ const Home = () => {
           <li className='w-[40px] h-[40px] bg-[#999] hover:bg-[#72bf6a] flex items-center justify-center rounded-full'><a href='https://github.com/julach-erazan' ><img src={github} alt="GitHub" className='w-[20px] h-[20px]' /></a></li>
         </div>
 
-        <a href="/Resume/_Julach_Earzan-Software_Engineer-Internship.pdf" download><button className='
+        <a href="/Resume/_Julach_Earzan_Software-Engineer.pdf" download><button className='
             w-[200px] h-[40px]
             bg-transparen mt-[30px]
             rounded-full text-[15px]
